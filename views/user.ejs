@@ -23,7 +23,7 @@
         <tr>
             <td><%= data[i].id %></td>
             <td><%= data[i].title %></td>
-            <td><%= data[i]["datetime(finished,'+9 hours')"] %></td>
+            <td><%= data[i]['datetime("finished","+9 hours")'] %></td>
             <td><%= data[i].checked ? 'YES':' ' %></td>
             <td><a href= "javascript:del(<%= data[i].id %>);"><%= __n('User.Delete') %></a></td>
         </tr>
