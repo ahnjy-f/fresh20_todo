@@ -5,7 +5,7 @@
     <% for(let i in data){ %>
         <li class="list-group-item list-group-item-action">
           <a class="text-dark" href="/view?id=<%=data[i].id %>">
-          <%=data[i]["datatime(finished,'+9 hours')"] + ' ' + data[i].title %></a>
+            <%=data[i]["datetime(finished,'+9 hours')"] + ' ' + data[i].title %></a>
         </li>
     
     <%}%>
@@ -16,7 +16,7 @@
     <% for(let i in data2){ %>
         <li class="list-group-item list-group-item-action">
           <a class="text-dark" href="/view?id=<%=data2[i].id %>">
-          <%=data[i]["datatime(finished,'+9 hours')"] + ' ' + data[i].title %></a>
+            <%=data2[i]["datetime(finished,'+9 hours')"] + ' ' + data2[i].title %></a>
         </li>
     
     <%}%>
