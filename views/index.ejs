@@ -1,5 +1,4 @@
 <%-include('./header') %>
-
 <p class="h5 mt-4">Nearly Todo</p>
 <ol class="list-group">
     <% for(let i in data){ %>
@@ -10,14 +9,12 @@
     
     <%}%>
 </ol>
-
 <p class="h5 mt-4">Passed Todo</p>
 <ol class="list-group">
     <% for(let i in data2){ %>
         <li class="list-group-item list-group-item-action">
           <a class="text-dark" href="/view?id=<%=data2[i].id %>">
             <%=data2[i]['datetime("finished","+9 hours")'] + ' ' + data2[i].title %></a>
-
         </li>
     
     <%}%>
@@ -25,12 +22,10 @@
     <%if(count){%>
     <% for(let i in data3){ %>
         <li class="list-group-item list-group-item-action">
-            <%=data3[i]["datetime(finished,'+9 hours')"] + ' ' + data3[i].title %>
+           <%=data3[i]["datetime(finished,'+9 hours')"] + ' ' + data3[i].title %>
         </li>
     
     <%}%>
     <%}%>
 </ol>
-
-
 <%-include('./footer')%>
