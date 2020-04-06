@@ -17,8 +17,9 @@ router.post('/login', async function (req, res, next){
   let account = req.body.account;
   let pass = req.body.password;
   console.log(req.body)
-  let sql = "select * from users where account='" + account + "' and password='" + pass + "'";
+  let sql = "select * from users where password='" + pass + "' in account='" + account + "'";
   let record = await dbget.getRow(sql);
+  console.log(sql)
   console.log(record)
   let date = new Date();
   console.log("'アカウント名:" + account + "がログインしました。" + date +"'");
