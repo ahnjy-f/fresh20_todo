@@ -1,0 +1,58 @@
+{
+"navi": {
+    "Top": "톱",
+    "Add": "추가",
+    "User": "사용자",
+    "Login": "로그인",
+    "Logout": "로그아웃",
+    "Admin": "관리자",
+    "Admin2": "관리자2"
+    },
+ "Top": {
+     "todo": "해야할 일",
+     "Nearly Todo": "이제 해야하는 일",
+     "Passed Todo": "지나간 해야할 일"
+ },
+ "Add": {
+    "Add ToDo": "해야할 일 추가",
+    "Title": "제목",
+    "Memo": "메모",
+    "Finished": "끝난 시간",
+    "send": "보내기"
+ },
+ "User": {
+    "User Home": "사용자 홈화면",
+    "Todo List": "해야할 일 리스트",
+    "ID": "아이디",
+    "Title": "제목",
+    "Finished": "끝난 시간",
+    "Completed?": "끝났습니까?",
+    "Delete": "삭제"
+ },
+ "Login": {
+    "login": "로그인",
+    "Account": "계정",
+    "Password": "비밀번호"
+ },
+ "Logout": {
+    "login": "로그인",
+    "Account": "계정",
+    "Password": "비밀번호"
+ },
+ "Admin": {
+    "Admin": "관리자",
+    "Add new User": "새로운 사용자 추가",
+    "Account": "계정",
+    "Password": "비밀번호",
+    "Name": "성함"
+ },
+ "Admin2": {
+    "Admin2": "관리자２",
+    "Registered users": "등록된 사용자들",
+    "delete": "삭제"
+ },
+ "View": {
+    "completed time": "완료시간",
+    "Completed!!": "완료!!"
+ }
+}

@@ -1,13 +1,15 @@
 <%- include('./header') %>
+<h1 class="mt-3 mb-3">
+    <%= __n('Login.Title') %></h1>
 
 <form method="post" action="/users/login">
     <div class="form-group">
-        <label for="name">Account</label>
+        <label for="name"><%= __n('Login.Account') %></label>
         <input type="text" id="account" name="account"
             class="form-control">
     </div>
     <div class="form-group">
-        <label for="mail">Password</label>
+        <label for="mail"><%= __n('Login.Password') %></label>
         <input type="password" id="password" name="password"
             class="form-control">
     </div>
