@@ -13,9 +13,11 @@
     <% for(let i in data){ %>
         <li class="list-group-item list-group-item-action">
             <%= data[i].id + ': ' + data[i].account %>
+            <%if(data[i].role!="admin"){%>
             <strong>
                 <a href="javascript:del(<%=data[i].id %>)">[delete]</a>
             </strong>
+            <%}%>
         </li>
     
     <%}%>
