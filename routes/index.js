@@ -65,7 +65,7 @@ router.get('/view', async function(req, res, next){
   res.render('view', {
     title: 'ShowTodo',
     login: req.session.login,
-    data: record , 
+    data: record
   })
 })
 

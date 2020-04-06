@@ -1,0 +1,60 @@
+{
+	"navi": {
+		"Top": "Top",
+		"Add": "Add",
+		"User": "User",
+		"Login": "Login",
+		"Logout": "Logout",
+		"Admin": "Admin",
+		"Admin2": "Admin2"
+	},
+	"Top": {
+		"todo": "todo",
+		"Nearly Todo": "Nearly Todo",
+		"Passed Todo": "Passed Todo"
+	},
+	"Add": {
+		"Add ToDo": "Add ToDo",
+		"Title": "Title",
+		"Memo": "Memo",
+		"Finished": "Finished",
+		"send": "send"
+	},
+	"User": {
+		"User Home": "User Home",
+		"Todo List": "Todo List",
+		"ID": "ID",
+		"Title": "Title",
+		"Finished": "Finished",
+		"Completed?": "Completed?",
+		"Delete": "Delete"
+	},
+	"Login": {
+		"login": "login",
+		"Account": "Account",
+		"Password": "Password"
+	},
+	"Logout": {
+		"login": "login",
+		"Account": "Account",
+		"Password": "Password"
+	},
+	"Admin": {
+		"Admin": "Admin",
+		"Add new User": "Add new User",
+		"Account": "Account",
+		"Password": "Password",
+		"Name": "Name"
+	},
+	"Admin2": {
+		"Admin2": "Admin2",
+		"Registered users": "Registered users",
+		"delete": "delete"
+	},
+	"View": {
+		"completed time": "completed time",
+		"Completed!!": "Completed!!"
+	},
+	"ログイン": "ログイン",
+	"todo": "todo"
+}

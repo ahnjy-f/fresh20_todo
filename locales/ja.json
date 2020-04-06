@@ -1,0 +1,66 @@
+{
+	"navi": {
+		"Top": "トップ",
+		"Add": "追加",
+		"User": "使用者",
+		"Login": "ログイン",
+		"Logout": "ログアウト",
+		"Admin": "管理者",
+		"Admin2": "管理者2"
+	},
+	"Header": {
+		"logined": "ログインしました。"
+	},
+	"Top": {
+		"Title": "すること",
+		"Nearly Todo": "今すること",
+		"Passed Todo": "もう過ぎたすること"
+	},
+	"Add": {
+		"Add ToDo": "することの追加",
+		"Title": "タイトル",
+		"Memo": "メモ",
+		"Finished": "終わった時間",
+		"send": "送信"
+	},
+	"User": {
+		"User Home": "使用者のホーム画面",
+		"Todo List": "することのリスト",
+		"ID": "ID",
+		"Title": "タイトル",
+		"Finished": "終わった時間",
+		"Completed?": "完了しましたか？",
+		"Delete": "削除"
+	},
+	"Login": {
+		"Title": "ログイン",
+		"Account": "アカウント",
+		"Password": "パスワード"
+	},
+	"Logout": {
+		"Login": "ログイン",
+		"Account": "アカウント",
+		"Password": "パスワード"
+	},
+	"Admin": {
+		"Admin": "管理者",
+		"Add new User": "新しい使用者の追加",
+		"Account": "アカウント",
+		"Password": "パスワード",
+		"Name": "お名前"
+	},
+	"Admin2": {
+		"Admin2": "管理者２",
+		"Regstered users.": "登録された使用者たち",
+		"delete": "削除",
+		"Registered users": "登録された使用者たち"
+	},
+	"View": {
+		"completed time": "完了時間",
+		"Completed!!": "完了!!"
+	},
+	"todo": "todo",
+	"ログイン": "ログイン",
+	"Add ToDo": "Add ToDo",
+	"User Home": "User Home"
+}
