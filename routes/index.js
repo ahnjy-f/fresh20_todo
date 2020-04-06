@@ -37,7 +37,7 @@ router.post('/add', async function(req, res, next){
   let title = req.body.title;
   let memo = req.body.memo;
   let finished = req.body.finished;
-  let sql = "insert into todo (user_id,title,memo,finished) values(" + uid + ",'" + title + "','" + memo + "',datetime'" + finished + "',' -9 hours'))";
+  let sql = "insert into todo (user_id,title,memo,finished) values(" + uid + ",'" + title + "','" + memo + "', datetime('" + finished + "' , '-9 hours'))";
   await dbdo.exec(sql);
   res.redirect('/');
 })
