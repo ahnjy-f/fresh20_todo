@@ -20,6 +20,8 @@ router.post('/login', async function (req, res, next){
   let sql = "select * from users where account='" + account + "' and password='" + pass + "'";
   let record = await dbget.getRow(sql);
   console.log(record)
+  let date = new Date();
+  console.log("'アカウント名:" + account + "がログインしました。" + date +"'");
   if(record != undefined){
     req.session.login = record;
   }
