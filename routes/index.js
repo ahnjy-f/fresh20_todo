@@ -9,9 +9,9 @@ router.get('/', async function (req, res, next) {
   if(req.session.login == undefined){
     res.redirect('/users/login');
   }
-  let sql = "select *,datetime(finished,'+9 hours') from todo where user_id=" + req.session.login.id + ' and checked = 0 and finished > CURRENT_TIMESTAMP order by finished asc limit 10';
+  let sql = 'select *,datetime("finished","+9 hours") from todo where user_id=' + req.session.login.id + ' and checked = 0 and finished > CURRENT_TIMESTAMP order by finished asc limit 10';
   let records = await dball.getAllRows(sql);
-  let sql2 = "select *,datetime(finished,'+9 hours') from todo where user_id=" + req.session.login.id + ' and checked = 0 and finished < CURRENT_TIMESTAMP order by finished desc limit 10';
+  let sql2 = 'select *,datetime("finished","+9 hours") from todo where user_id=' + req.session.login.id + ' and checked = 0 and finished < CURRENT_TIMESTAMP order by finished desc limit 10';
   let records2 = await dball.getAllRows(sql2);
   let sql3 = "select *,datetime(finished,'+9 hours') from todo where user_id=" + req.session.login.id + ' and checked = 1 order by finished desc limit 10';
   let records3 = await dball.getAllRows(sql3);
@@ -47,7 +47,7 @@ router.post('/add', async function(req, res, next){
   let title = req.body.title;
   let memo = req.body.memo;
   let finished = req.body.finished;
-  let sql = "insert into todo (user_id,title,memo,finished) values(" + uid + ",'" + title + "','" + memo + "', datetime('" + finished + "' , '-9 hours'))";
+  let sql = 'insert into todo (user_id,title,memo,finished) values(' + uid + ',"' + title + '","' + memo + '", "'+finished +'")';
   await dbdo.exec(sql);
   res.redirect('/');
 })
