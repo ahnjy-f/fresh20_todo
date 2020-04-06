@@ -4,23 +4,23 @@
             <a class="navbar-brand" href="/" >Top</a>
         </li>
         <li class="nav-item active">
-            <a class="navbar-link" href="/add">Add</a>
+            <a class="navbar-brand" href="/add">Add</a>
         </li>
         <li class="nav-item active">
-            <a class="navbar-link" href="/user">USER</a>
+            <a class="navbar-brand" href="/user">USER</a>
         </li>
         <li class="nav-item active">
-            <a class="navbar-link" href="/users/login">login</a>
+            <a class="navbar-brand" href="/users/login">login</a>
         </li>
         <li class="nav-item active">
-            <a class="navbar-link" href="/users/logout">logout</a>
+            <a class="navbar-brand" href="/users/logout">logout</a>
         </li>
         <% if (typeof login !== "undefined"  && login.role == 'admin') { %>
         <li class="nav-item active">
-            <a class="navbar-link" href="/users/admin">admin</a>
+            <a class="navbar-brand" href="/users/admin">admin</a>
         </li>
         <li class="nav-item active">
-            <a class="navbar-link" href="/users/admin2">admin2</a>
+            <a class="navbar-brand" href="/users/admin2">admin2</a>
         </li>
         <% } %>
     </ul>
