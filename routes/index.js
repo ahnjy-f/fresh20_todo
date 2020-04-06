@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-
 var dbget = require('../db/get.js');
 var dball = require('../db/all.js');
 var dbdo = require('../db/exec.js');
+var count =false;
 
 router.get('/', async function (req, res, next) {
   if(req.session.login == undefined){
@@ -13,6 +13,8 @@ router.get('/', async function (req, res, next) {
   let records = await dball.getAllRows(sql);
   let sql2 = "select *,datetime(finished,'+9 hours') from todo where user_id=" + req.session.login.id + ' and checked = 0 and finished < CURRENT_TIMESTAMP order by finished desc limit 10';
   let records2 = await dball.getAllRows(sql2);
+  let sql3 = "select *,datetime(finished,'+9 hours') from todo where user_id=" + req.session.login.id + ' and checked = 1 order by finished desc limit 10';
+  let records3 = await dball.getAllRows(sql3);
   console.log(sql2);
   console.log(sql);
   console.log(records);
@@ -25,6 +27,8 @@ router.get('/', async function (req, res, next) {
     login: req.session.login,
     data: records,
     data2: records2,
+    data3: records3,
+    count: count,
   })
 });
 
@@ -54,9 +58,10 @@ router.get('/view', async function(req, res, next){
   }
   let uid = req.session.login.id;
   let id = req.query.id;
-  let sql = "select *, datetime(finished,'+9 hours') from todo where usr_id=" + uid + " and checked = 0 id = " + id;
+  let sql = 'select *, datetime("finished","+9 hours") from todo where usr_id=' + uid + ' and checked = 0 id = ' + id;
   console.log(sql);
   let record =await dbget.getRow(sql);
+  console.log(record);
   res.render('view', {
     title: 'ShowTodo',
     login: req.session.login,
@@ -80,7 +85,7 @@ router.get('/user', async function(req, res, next){
   if(req.session.login==undefined){
     res.redirect('/users/login');
   }
-  let sql = "select *,datetime(finished ,'+9 hours') from todo where user_id=" + req.session.login.id + ' order by finished asc';
+  let sql = 'select *,datetime("finished","+9 hours") from todo where user_id=' + req.session.login.id + " order by finished asc";
   let records = await dball.getAllRows(sql);
   console.log(sql);
   res.render('user',{
@@ -101,6 +106,16 @@ router.get('/del_todo', async function(req, res, next){
   console.log(sql);
   let record =await dbdo.exec(sql);
   res.redirect('/user');
+})
+
+router.get('/switch', function(req,res,next){
+  if(count){
+    count=false;
+  }
+  else{
+    count=true;
+  }
+  res.redirect("/");
 })
 
 
